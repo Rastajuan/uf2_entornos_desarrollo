@@ -16,7 +16,7 @@ public class notas {
 * Variables que recogen el valor de las notas (uf),los acumulados (acumulado) y la nota definitiva (def)
 */
 double uf1, uf2, uf3;
-double acumulado1, acumulado2, acumulado3, def;
+double acumulado1, acumulado2, acumulado3, definitiva;
 Scanner entrada = new Scanner(System.in);
 /**
 *Método para ingresar las notas de un estudiante.
@@ -81,7 +81,7 @@ acumulado3 = uf3 * 0.30;
 /**
 * Nota definitiva del estudiante sumando las 3 acumuladas
 */
-def = acumulado1 + acumulado2+ acumulado3;
+definitiva = acumulado1 + acumulado2+ acumulado3;
 }
 /**
 *Método para mostrar las notas y la nota definitiva de un estudiante.
@@ -106,7 +106,7 @@ System.out.println(" acumulado 3 = "+ acumulado3);
 /**
 * Impresion nota definitiva
 */
-System.out.println(" nota definitiva es = "+ def);
+System.out.println(" nota definitiva es = "+ definitiva);
 }
 /**
 *Método para determinar si un estudiante aprueba o suspende.
@@ -115,10 +115,10 @@ System.out.println(" nota definitiva es = "+ def);
 *
 */
 public void aprobado() {
-if(def<5 && def>=0) {
+if(definitiva<5 && definitiva>=0) {
 System.out.println("suspendido");
 }else {
-if (def>=5 && def<=10 ) {
+if (definitiva>=5 && definitiva<=10 ) {
 System.out.println("aprobado");
 }else {
 System.out.println(" error en la notas");
